@@ -1,0 +1,14 @@
+.navbar {
+    background-color: seagreen;
+    height: 80px;
+    display:flex;
+    justify-content: space-around;
+    align-content: center;
+    
+}
+
+.nav-link {
+    text-decoration: none;
+    align-self: center;
+    color: white;
+}

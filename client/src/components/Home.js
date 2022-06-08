@@ -1,5 +1,7 @@
 import NavBar from "./NavBar"
 import ItemContainer from "./ItemContainer"
+import "../App.css"
+import BBlogo from "./assets/BBlogo.png"
 import { useState, useEffect } from "react"
 
 const Home = () => {
@@ -13,11 +15,10 @@ const Home = () => {
     },[])
 
     return (
-        <div className="Home">
+        <div className="home">
+            <h1 className="home-header"><img className="home-logo" src={BBlogo} /></h1>
             <NavBar />
-            <h1>hello from home!</h1>
             <ItemContainer items = { items } />
-
         </div>
     );
 }

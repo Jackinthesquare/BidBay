@@ -1,4 +1,5 @@
 import "./css/ItemContainer.css"
+
 const ItemContainer = ({ items }) => {
     
     return (
@@ -11,8 +12,8 @@ const ItemContainer = ({ items }) => {
                             
                             <div className="pic-card">
                             <h4 className="item-title">{item.title}</h4>
-                            <p>{item.description}</p>
                             <img className="pic-card-img" src={item.image.url} />
+                            <p>{item.description}</p>
                             <p>{item.price} <span>Time left</span></p>
                         
                             </div>
