@@ -1,0 +1,27 @@
+.pic-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightslategray;
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+    gap: 0;
+}
+
+.pic-card {
+    width: 300px;
+    height: 400px;
+    border: 1px solid lightslategray;
+}
+
+.item-title{
+    font-size: 1em;
+}
+
+.pic-card-img {
+    width: 100px;
+    height: auto;
+    border: 1px solid black
+}
