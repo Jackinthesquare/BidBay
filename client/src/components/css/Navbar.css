@@ -1,6 +1,6 @@
 .navbar {
-    background-color: seagreen;
-    height: 80px;
+    background-color: rgb(110, 226, 160);
+    height: 50px;
     display:flex;
     justify-content: space-around;
     align-content: center;
@@ -10,5 +10,57 @@
 .nav-link {
     text-decoration: none;
     align-self: center;
-    color: white;
+    color: whitesmoke;
+}
+
+.home-icon {
+    width: 20px;
+    height: auto;
+    padding: 0;
+}
+
+.footer-container {
+    height: 100px;
+    /* border: 1px solid; */
+    background-color: rgb(110, 226, 160);
+}
+
+.icon-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 500px;
+    position: relative;
+    top: 15%;
+    left: 5%;
+    /* border: 1px solid; */
+}
+
+.footer-text{
+    /* color: whitesmoke; */
+    position: relative;
+    top: -30%;
+    left: 60%;
+    font-size: 0.8em;
+    width: 500px;
+}
+
+.footer-icon {
+    height: 30px;
+    width: 30px;
+   
+    border-radius: 50%;
+}
+
+#fb-icon{
+    background: white;
+}
+
+#insta-icon{
+    background: white;
+}
+
+#github-icon{
+    background: white;
 }

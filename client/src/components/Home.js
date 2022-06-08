@@ -1,4 +1,5 @@
 import NavBar from "./NavBar"
+import Footer from "./Footer"
 import ItemContainer from "./ItemContainer"
 import "../App.css"
 import BBlogo from "./assets/BBlogo.png"
@@ -19,6 +20,7 @@ const Home = () => {
             <h1 className="home-header"><img className="home-logo" src={BBlogo} /></h1>
             <NavBar />
             <ItemContainer items = { items } />
+            <Footer />
         </div>
     );
 }

@@ -3,17 +3,25 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border: 1px solid lightslategray;
+    /* border: 1px solid lightslategray; */
+    border-radius: 5px;
     width: 90%;
     margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding: 20px 50px;
-    gap: 0;
+
 }
 
 .pic-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     width: 300px;
-    height: 400px;
+    height: 500px;
     border: 1px solid lightslategray;
+    
 }
 
 .item-title{
@@ -21,7 +29,7 @@
 }
 
 .pic-card-img {
-    width: 100px;
-    height: auto;
+    width: 200px;
+    height: 200px;
     border: 1px solid black
 }

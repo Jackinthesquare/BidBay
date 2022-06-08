@@ -1,7 +1,6 @@
 .App {
   text-align: center;
   background-color: whitesmoke;
-  
 }
 
 .login-form {
@@ -9,11 +8,11 @@
   justify-content: center;
   /* align-items: center; */
   border: 1px solid blueviolet
-
 }
 
+
 .home-header {
-  background: red;
+  background: whitesmoke;
   padding: 0;
   margin: 0;
   height: 200px;

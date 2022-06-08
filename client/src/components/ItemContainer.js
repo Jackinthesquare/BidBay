@@ -14,7 +14,7 @@ const ItemContainer = ({ items }) => {
                             <h4 className="item-title">{item.title}</h4>
                             <img className="pic-card-img" src={item.image.url} />
                             <p>{item.description}</p>
-                            <p>{item.price} <span>Time left</span></p>
+                            <p>{item.price} <span>Time left : </span></p>
                         
                             </div>
                         )
