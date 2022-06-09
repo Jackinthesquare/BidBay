@@ -1,13 +1,13 @@
 import { useHistory } from 'react-router-dom'
 
-const Item = ({item, itemId, setItemId}) => {
+const Item = ({item, setItemId}) => {
     const history = useHistory()
 
     const handleRedirect = () => {
         setItemId(item.id)
         console.log(item.id)
         // history.push(`/signup`) // tested routing works
-        history.push(`/item/${itemId}`)
+        history.push(`/item/${item.id}`)
     }
 
     return (

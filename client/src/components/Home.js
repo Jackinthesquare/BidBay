@@ -1,9 +1,11 @@
+import "../App.css"
 import NavBar from "./NavBar"
 import Footer from "./Footer"
 import ItemContainer from "./ItemContainer"
-import "../App.css"
-import BBlogo from "./assets/BBlogo.png"
+
 import { useState, useEffect } from "react"
+
+import BBlogo from "./assets/BBlogo.png"
 
 const Home = () => {
     const [items,setItems] = useState([])

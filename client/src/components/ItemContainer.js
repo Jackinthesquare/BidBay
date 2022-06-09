@@ -20,7 +20,7 @@ const ItemContainer = ({ items }) => {
                             // <p>{item.description}</p>
                             // <p>{item.price} <span>Time left : </span></p>
                             // </div>
-                            <Item key={item.id} item={item} itemId={itemId} setItemId={setItemId}/>
+                            <Item key={item.id} item={item} setItemId={setItemId}/>
                         )
                     })
                 }
