@@ -7,7 +7,7 @@ const Item = ({item, setItemId}) => {
         setItemId(item.id)
         console.log(item.id)
         // history.push(`/signup`) // tested routing works
-        history.push(`/item/${item.id}`)
+        history.push(`/items/${item.id}`)
     }
 
     return (

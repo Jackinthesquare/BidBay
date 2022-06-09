@@ -1,18 +1,16 @@
 import "./css/ItemContainer.css"
-import { useState } from "react"
 
 import Item from "./Item"
 
 
-const ItemContainer = ({ items }) => {
-    const [itemId,setItemId] = useState(0)
-    
+const ItemContainer = ({ items, setItemId }) => {
+
     return (
         <div>
             <div className="pic-container">
                 {
                     items.map((item) => {
-                        
+
                         return (
                             // <div className="pic-card">
                             // <h4 className="item-title">{item.title}</h4>
@@ -20,7 +18,7 @@ const ItemContainer = ({ items }) => {
                             // <p>{item.description}</p>
                             // <p>{item.price} <span>Time left : </span></p>
                             // </div>
-                            <Item key={item.id} item={item} setItemId={setItemId}/>
+                            <Item key={item.id} item={item} setItemId={setItemId} />
                         )
                     })
                 }
