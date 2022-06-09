@@ -23,6 +23,7 @@ function App() {
           <Home />
         </Route>
       </Switch>
+      
 
       {/* <Route exact path="/my_account">
         <MyAccount />

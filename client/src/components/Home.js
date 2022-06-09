@@ -13,9 +13,6 @@ import BBlogo from "./assets/BBlogo.png"
 
 
 const Home = () => {
-    let { path, url } = useRouteMatch();
-    const { id } = useParams()
-
     const [items, setItems] = useState([])
     const [itemId, setItemId] = useState(0)
 
@@ -30,12 +27,15 @@ const Home = () => {
     return (
         <div className="home">
             <h1 className="home-header"><img className="home-logo" src={BBlogo} /></h1>
-       
-            <NavBar />
-            <Switch>
-                <ItemContainer items={items} setItemId={setItemId} />
 
-                <Route exact path="/my_account">
+            <NavBar />
+
+            <Switch>
+                <Route exact path="/home">
+                    <ItemContainer items={items} setItemId={setItemId} />
+                </Route>
+
+                <Route path="/my_account">
                     <MyAccount />
                 </Route>
 
@@ -43,7 +43,6 @@ const Home = () => {
                     <ItemPage />
                 </Route>
             </Switch>
-
 
             <Footer />
         </div>
