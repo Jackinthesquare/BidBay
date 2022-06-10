@@ -8,7 +8,7 @@ import MyAccount from "./MyAccount"
 import Auctions from "./Auctions"
 import Purchases from "./Purchases"
 
-import { Link, Route, Switch, useRouteMatch, useParams } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import { useState, useEffect } from "react"
 
 
@@ -51,7 +51,6 @@ const Home = () => {
                 <Route exact path="/items/:id">
                     <ItemPage />
                 </Route>
-                
             </Switch>
 
             <Footer />

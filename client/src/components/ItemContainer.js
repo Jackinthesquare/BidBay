@@ -25,9 +25,9 @@ const ItemContainer = ({ items, setItemId }) => {
                         )
                     })
                 }
-                <Route path={`${match.url}`}>
+                {/* <Route path={`${match.url}`}>
                     <ItemPage items={items} />
-                </Route>
+                </Route> */}
                
             </div>
         </div>

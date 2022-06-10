@@ -11,14 +11,24 @@ const ItemPage = ({ items }) => {
             let req = await fetch(match.url)
             let res = await req.json()
             setItemPage(res)
-            console.log(res)
         })()
     }, [])
+    
+        // console.log(Array.isArray(itemPage.images))
+        console.log(itemPage)
 
     return (
-        <div className="item-page">
-            <h1>{match.url}</h1>
-    <h2>{itemPage.id}</h2>
+        
+        <div className="item-page-container">
+        <h1>{itemPage.title}</h1>
+        {itemPage && <p>Description: {itemPage.description}</p>}
+        <p>Category: {itemPage.item_tag}</p>
+        {/* <p>price: {itemPage.price}</p> */}
+        {/* <button>Bid</button> */}
+        {/* <img src /> */}
+        <p>{itemPage.title}</p>
+        
+
         </div>
     );
 }
