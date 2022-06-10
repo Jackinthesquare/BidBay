@@ -1,4 +1,4 @@
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 
 const Item = ({item, setItemId}) => {
     const history = useHistory()
@@ -7,7 +7,7 @@ const Item = ({item, setItemId}) => {
         setItemId(item.id)
         console.log(item.id)
         // history.push(`/signup`) // tested routing works
-        history.push(`/items/${item.id}`)
+        // history.push(`/items/${item.id}`)
     }
 
     return (
@@ -16,6 +16,8 @@ const Item = ({item, setItemId}) => {
         <img className="pic-card-img" src={item.image.url} onClick={handleRedirect} />
         <p>{item.description}</p>
         <p>{item.price} <span>Time left : </span></p>
+        <Link to={`/items/${item.id}`}>items link</Link>
+        
         </div>
       );
     }

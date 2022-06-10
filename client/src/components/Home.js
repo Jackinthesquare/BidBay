@@ -1,15 +1,16 @@
 import "../App.css"
+import BBlogo from "./assets/BBlogo.png"
 import NavBar from "./NavBar"
 import Footer from "./Footer"
 import ItemContainer from "./ItemContainer"
-
-import { Link, Route, Switch, useRouteMatch, useParams } from 'react-router-dom'
 import ItemPage from "./ItemPage"
 import MyAccount from "./MyAccount"
+import Auctions from "./Auctions"
+import Purchases from "./Purchases"
 
+import { Link, Route, Switch, useRouteMatch, useParams } from 'react-router-dom'
 import { useState, useEffect } from "react"
 
-import BBlogo from "./assets/BBlogo.png"
 
 
 const Home = () => {
@@ -31,7 +32,7 @@ const Home = () => {
             <NavBar />
 
             <Switch>
-                <Route exact path="/home">
+                <Route exact path="/items">
                     <ItemContainer items={items} setItemId={setItemId} />
                 </Route>
 
@@ -39,9 +40,18 @@ const Home = () => {
                     <MyAccount />
                 </Route>
 
-                <Route exact path="/item/1">
+                <Route path="/my_auctions">
+                    <Auctions />
+                </Route>
+
+                <Route path="/my_purchases">
+                    <Purchases />
+                </Route>
+
+                <Route exact path="/items/:id">
                     <ItemPage />
                 </Route>
+                
             </Switch>
 
             <Footer />

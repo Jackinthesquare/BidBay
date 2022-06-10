@@ -5,7 +5,7 @@ import './css/Navbar.css'
 const NavBar = () => {
     return (
         <div className="navbar">
-            <NavLink to="/signup" className="nav-link"><span><img className='home-icon' src="https://img.icons8.com/material-outlined/344/home--v2.png"/> </span>
+            <NavLink to="/items" className="nav-link"><span><img className='home-icon' src="https://img.icons8.com/material-outlined/344/home--v2.png"/> </span>
             Main</NavLink>
             <NavLink to="/my_account" className="nav-link">My Account</NavLink>
             <NavLink to="/my_auctions" className="nav-link">My Auctions</NavLink>

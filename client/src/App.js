@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <Switch>
+      {/* <Switch>
         <Route exact path="/">
           <Login />
         </Route>
@@ -19,20 +19,19 @@ function App() {
           <Signup />
         </Route>
 
-        <Route exact path="/home">
+        <Route exact path="/items">
           <Home />
         </Route>
-      </Switch>
-      
+      </Switch> */}
 
-      {/* <Route exact path="/my_account">
-        <MyAccount />
-      </Route>
 
-      <Route exact path="/items/1">
+     
+
+      {/* <Route exact path="/items/1">
         <ItemPage />
       </Route> */}
 
+      <Home />
 
 
 
