@@ -4,13 +4,14 @@
     display:flex;
     justify-content: space-around;
     align-content: center;
-    
 }
 
 .nav-link {
     text-decoration: none;
     align-self: center;
-    /* color: whitesmoke; */
+    color: whitesmoke;
+    padding: 12px;
+    width: 100px;
 }
 
 .home-icon {
@@ -49,8 +50,11 @@
 .footer-icon {
     height: 30px;
     width: 30px;
-   
     border-radius: 50%;
+}
+
+.footer-icon:hover {
+    cursor:pointer;
 }
 
 #fb-icon{

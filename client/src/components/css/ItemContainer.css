@@ -10,7 +10,6 @@
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 20px 50px;
-
 }
 
 .pic-card {
@@ -25,12 +24,10 @@
 
 
 .pic-card-img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) rotate(5deg);
+    transition: 2s;
     cursor: pointer;
-    box-shadow: 5px 5px 5px lightgreen;
-    
-    -webkit-transform: rotate(5deg); /* Safari */
-    transform: rotate(5deg);
+    box-shadow: 5px 5px 5px lightgreen;  
 }
 
 
@@ -41,5 +38,6 @@
 .pic-card-img {
     width: 200px;
     height: 200px;
-    border: 1px solid black
+    border: 1px solid black;
+    border-radius: 10px;
 }
