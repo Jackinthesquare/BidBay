@@ -27,7 +27,7 @@
     transform: scale(1.1) rotate(5deg);
     transition: 2s;
     cursor: pointer;
-    box-shadow: 5px 5px 5px lightgreen;  
+    box-shadow: 5px 5px 5px rgb(159, 96, 218);  
 }
 
 
@@ -38,6 +38,6 @@
 .pic-card-img {
     width: 200px;
     height: 200px;
-    border: 1px solid black;
     border-radius: 10px;
+    box-shadow: 5px 5px 5px black;  
 }

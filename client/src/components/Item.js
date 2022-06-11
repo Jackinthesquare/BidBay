@@ -12,10 +12,10 @@ const Item = ({ item, setItemId }) => {
 
   return (
     <div className="pic-card">
-      <h4 className="item-title">{item.title}</h4>
+      <h1 className="item-title">{item.title}</h1>
       <img className="pic-card-img" src={item.image.url} onClick={handleRedirect} />
-      <p>{item.description}</p>
-      <p>{item.price} <span>Time left : </span></p>
+      <p>Description : {item.description}</p>
+      <p>Time left : <span> {item.price} </span></p>
       {/* <Link to={`/items/${item.id}`}>items link</Link> */}
 
     </div>
