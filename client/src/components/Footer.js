@@ -13,7 +13,7 @@ const Footer = () => {
                 <img className='footer-icon' id='github-icon' src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/71-github-128.png" />
             </div>
             <div className='footer-text'>
-            <p>Copyright © 1995-2022 BidBay Inc. All Rights Reserved.</p>
+            <span>Copyright © 1995-2022 BidBay Inc. All Rights Reserved.</span>
             </div>
         </div>
     );
