@@ -30,11 +30,26 @@
     cursor: pointer;
 }
 
+.isSelected-img{
+    width: 75px;
+    height: 75px;
+    border: 1px solid blue;
+}
+
+.isSelected-img:hover {
+    cursor: pointer;
+}
+
 .desc-box {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-content: flex-start;
+    width: 500px;
+}
+
+.desc-box > p > span {
+font-weight: bold;
 }
 
 .bid-btn {
@@ -43,7 +58,7 @@
     color: white;
     width: 200px;
     height: 40px;
-    margin: 0 38%;
+    margin: 0 31%;
     border-radius: 20px;
     font-weight: bold;
     font-size: 14px;
@@ -51,4 +66,5 @@
 
 .bid-btn:hover {
     background: rgb(89, 32, 221);
+    cursor: pointer;
 }

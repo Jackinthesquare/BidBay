@@ -2,7 +2,7 @@ import "./css/ItemContainer.css"
 import { Route, useRouteMatch } from 'react-router-dom'
 
 import Item from "./Item"
-import ItemPage from "./ItemPage"
+import SearchBar from "./SearchBar"
 
 
 const ItemContainer = ({ items, setItemId }) => {
@@ -11,6 +11,7 @@ const ItemContainer = ({ items, setItemId }) => {
 
     return (
         <div>
+            <SearchBar />
             <div className="pic-container">
                 {
                     items.map((item) => {

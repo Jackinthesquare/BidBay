@@ -22,6 +22,10 @@
     border: 1px solid lightslategray;
 }
 
+.pic-card > p > span {
+    font-weight: bold;
+}
+
 
 .pic-card-img:hover {
     transform: scale(1.1) rotate(5deg);
