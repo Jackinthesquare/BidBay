@@ -20,8 +20,7 @@ const ItemPage = ({ items }) => {
         })()
     }, [])
 
-    // console.log(Array.isArray(itemPage.images))
-    console.log(itemPage.images && itemPage.images[0].url)
+    // console.log(itemPage.images && itemPage.images[0].url)
 
     return (
         <div>
@@ -30,7 +29,7 @@ const ItemPage = ({ items }) => {
                 {
                     itemPage.images && itemPage.images.map((image, index) => {
                         return (
-                            <img className={isSelected ? 'isSelected-img' : 'selected-img'} src={image.url} onClick={() => setSelectImg(image.url)} />
+                            <img key={index} className={isSelected ? 'isSelected-img' : 'selected-img'} src={image.url} onClick={() => setSelectImg(image.url)} />
                         )
                     })
                 }
@@ -49,7 +48,7 @@ const ItemPage = ({ items }) => {
                 <button className="bid-btn" onClick={() => setIsVisible(true) }>Bid</button>
             </div>
         </div>
-        <BidForm isVisible={isVisible} />
+        <BidForm isVisible={isVisible} setIsVisible={setIsVisible} itemPage={itemPage}/>
     </div>
     );
 }

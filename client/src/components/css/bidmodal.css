@@ -1,3 +1,9 @@
+/* removes "up/down arrows in forms" */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+}
+
 .bid-modal {
     border: 1px solid #fff;
     background: white;
@@ -6,4 +12,54 @@
     position: absolute;
     top: 40%;
     left: 50%;
+    padding: 0;
+    margin: 0;
+}
+
+.bid-modal > p {
+    font-weight: bold;
+}
+
+.bid-div > p {
+    font-weight: bold;  
+}
+
+.modal-x-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: white;
+    border: 1px dotted black;
+    font-size: 30px;
+}
+
+.bid-price {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+}
+
+.bid-timer{
+    position:absolute;
+    top: 30%;
+    left: 10%;
+}
+
+.bid-div {
+    background-color: rgb(204, 208, 212);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%
+}
+
+.bid-disclaimer {
+    font-size: 11px;
+    position: relative;
+    bottom: -20%;
+
+}
+
+.bid-form {
+ 
 }
