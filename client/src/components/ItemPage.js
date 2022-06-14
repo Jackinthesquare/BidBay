@@ -43,8 +43,8 @@ const ItemPage = ({ items }) => {
                 <h1>{itemPage.title}</h1>
                 {itemPage && <p><span>Description</span> : {itemPage.description}</p>}
                 {/* <p><span>Category</span> : {itemPage.item_tag}</p> */}
-                <p><span>Current Bid</span> : {itemPage.price}</p>
-                <p><span>Time ends : </span></p>
+                <p><span>Current Bid : </span>{itemPage.item_price}</p>
+                <p><span>Time ends : </span>{itemPage.end_time_str}</p>
                 <button className="bid-btn" onClick={() => setIsVisible(true) }>Bid</button>
             </div>
         </div>
