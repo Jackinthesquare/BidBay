@@ -7,7 +7,7 @@ class ItemSerializer < ActiveModel::Serializer
     :item_tag, 
     :user_id, 
     :end_time, 
-    :end_time_sec,
+    :time_diff,
     :end_time_str,
     :image
   ]

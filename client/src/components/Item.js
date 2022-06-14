@@ -16,7 +16,7 @@ const Item = ({ item, setItemId }) => {
       <img className="pic-card-img" src={item.image.url} onClick={handleRedirect} />
       <p><span>Description : </span>{item.description}</p>
       <p><span>Current Bid : </span> {item.item_price}</p>
-      <p><span>Time left : </span> {item.end_time}</p>
+      <p><span>Ends : </span> {item.end_time_str}</p>
       {/* <Link to={`/items/${item.id}`}>items link</Link> */}
 
     </div>

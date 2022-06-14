@@ -9,6 +9,8 @@ const ItemPage = ({ items }) => {
     const [selectImg, setSelectImg] = useState('')
     const [isSelected, setIsSelected] = useState(false)
     const [isVisible, setIsVisible] = useState(false)
+    const [counter, setCounter] = useState(0)
+    
     const match = useRouteMatch()
 
     useEffect(() => {
@@ -17,10 +19,16 @@ const ItemPage = ({ items }) => {
             let req = await fetch(match.url)
             let res = await req.json()
             setItemPage(res)
+            setCounter(res.time_diff)
         })()
     }, [])
-
     // console.log(itemPage.images && itemPage.images[0].url)
+
+    useEffect(() => {
+        counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
+    }, [counter])
+    console.log(counter)
+
 
     return (
         <div>
@@ -44,7 +52,8 @@ const ItemPage = ({ items }) => {
                 {itemPage && <p><span>Description</span> : {itemPage.description}</p>}
                 {/* <p><span>Category</span> : {itemPage.item_tag}</p> */}
                 <p><span>Current Bid : </span>{itemPage.item_price}</p>
-                <p><span>Time ends : </span>{itemPage.end_time_str}</p>
+                <p><span>Ends : </span>{itemPage.end_time_str}</p>
+                <p>Time left : {counter} seconds</p>
                 <button className="bid-btn" onClick={() => setIsVisible(true) }>Bid</button>
             </div>
         </div>

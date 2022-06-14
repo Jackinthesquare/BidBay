@@ -7,7 +7,7 @@ class CreateItems < ActiveRecord::Migration[6.1]
       t.string :item_tag
       t.integer :user_id
       t.datetime :end_time
-      t.integer :end_time_sec
+      t.integer :time_diff
       t.string :end_time_str
 
       t.timestamps
