@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2022_06_07_151753) do
     t.string "description"
     t.string "item_tag"
     t.integer "user_id"
+    t.datetime "end_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
