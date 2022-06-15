@@ -1,14 +1,15 @@
 import "./css/bidmodal.css"
 import ItemPage from "./ItemPage";
-const BidForm = ({ isVisible, setIsVisible, itemPage }) => {
-    const num = 12312.11111
-    console.log(num.toFixed(2))
+const BidForm = ({ isVisible, setIsVisible, itemPage, counter }) => {
+    // const num = 12312.11111
+    // console.log(num.toFixed(2))
 
     return (
         <div className="bid-modal" style={{ display: isVisible ? "block" : "none" }}>
             <button className="modal-x-btn" onClick={() => setIsVisible(false)}>x</button>
             <p className="bid-price">US ${itemPage.item_price}</p>
-            <p className="bid-timer">ends in : {itemPage.end_time}</p>
+            <p className="bid-end">ends in : {itemPage.end_time}</p>
+            <p style={{fontWeight: 'bold'}}>Time left : {counter} seconds</p>
             <div className="bid-div">
                 <p>Place your bid</p>
                 <form className="bid-form">

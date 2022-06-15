@@ -35,13 +35,13 @@ input[type=number]::-webkit-outer-spin-button {
 
 .bid-price {
     position: absolute;
-    top: 5%;
+    top: 15%;
     left: 10%;
 }
 
-.bid-timer{
+.bid-end{
     position:absolute;
-    top: 30%;
+    top: 35%;
     left: 10%;
 }
 

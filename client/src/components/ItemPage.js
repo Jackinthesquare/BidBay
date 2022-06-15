@@ -4,7 +4,7 @@ import { useRouteMatch } from 'react-router-dom'
 import './css/itemPage.css'
 import BidForm from "./BidForm"
 
-const ItemPage = ({ items }) => {
+const ItemPage = () => {
     const [itemPage, setItemPage] = useState({})
     const [selectImg, setSelectImg] = useState('')
     const [isSelected, setIsSelected] = useState(false)
@@ -26,8 +26,8 @@ const ItemPage = ({ items }) => {
 
     useEffect(() => {
         counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
-    }, [counter])
-    console.log(counter)
+    }, [])
+    console.log("date is " + Date.now())
 
 
     return (
@@ -50,14 +50,13 @@ const ItemPage = ({ items }) => {
             <div className="desc-box">
                 <h1>{itemPage.title}</h1>
                 {itemPage && <p><span>Description</span> : {itemPage.description}</p>}
-                {/* <p><span>Category</span> : {itemPage.item_tag}</p> */}
                 <p><span>Current Bid : </span>{itemPage.item_price}</p>
                 <p><span>Ends : </span>{itemPage.end_time_str}</p>
-                <p>Time left : {counter} seconds</p>
+                <p style={{fontWeight: 'bold'}}>Time left : {counter} seconds</p>
                 <button className="bid-btn" onClick={() => setIsVisible(true) }>Bid</button>
             </div>
         </div>
-        <BidForm isVisible={isVisible} setIsVisible={setIsVisible} itemPage={itemPage}/>
+        <BidForm isVisible={isVisible} setIsVisible={setIsVisible} itemPage={itemPage} counter={counter}/>
     </div>
     );
 }
