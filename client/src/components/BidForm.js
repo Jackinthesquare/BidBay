@@ -8,7 +8,7 @@ const BidForm = ({ isVisible, setIsVisible, itemPage, counter }) => {
         <div className="bid-modal" style={{ display: isVisible ? "block" : "none" }}>
             <button className="modal-x-btn" onClick={() => setIsVisible(false)}>x</button>
             <p className="bid-price">US ${itemPage.item_price}</p>
-            <p className="bid-end">ends in : {itemPage.end_time}</p>
+            <p className="bid-end">Time Ends : {itemPage.end_time_str}</p>
             <p style={{fontWeight: 'bold'}}>Time left : {counter} seconds</p>
             <div className="bid-div">
                 <p>Place your bid</p>

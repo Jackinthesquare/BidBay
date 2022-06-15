@@ -19,15 +19,19 @@ const ItemPage = () => {
             let req = await fetch(match.url)
             let res = await req.json()
             setItemPage(res)
-            setCounter(res.time_diff)
+            setCounter(Math.floor(res.end_time_to_i - Math.floor(Date.now() / 1000)))
         })()
     }, [])
     // console.log(itemPage.images && itemPage.images[0].url)
 
+    // add counter in empty array to render counter on change
     useEffect(() => {
         counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
-    }, [])
-    console.log("date is " + Date.now())
+    }, [counter])
+
+    // // testing end date and current date time in seconds
+    // console.log("date.now() is " + Math.floor(Date.now() / 1000))
+    // console.log(counter)
 
 
     return (
@@ -51,7 +55,7 @@ const ItemPage = () => {
                 <h1>{itemPage.title}</h1>
                 {itemPage && <p><span>Description</span> : {itemPage.description}</p>}
                 <p><span>Current Bid : </span>{itemPage.item_price}</p>
-                <p><span>Ends : </span>{itemPage.end_time_str}</p>
+                <p><span>Time Ends : </span>{itemPage.end_time_str}</p>
                 <p style={{fontWeight: 'bold'}}>Time left : {counter} seconds</p>
                 <button className="bid-btn" onClick={() => setIsVisible(true) }>Bid</button>
             </div>
