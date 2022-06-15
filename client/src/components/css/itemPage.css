@@ -5,12 +5,6 @@
     padding: 70px;
 }
 
-.show-img {
-    width: 400px;
-    height: 400px;
-    border: 1px solid grey;
-    padding: 0 20px;
-}
 
 .selected-img-container {
     display: flex;
@@ -22,10 +16,32 @@
     /* border: 1px solid grey; */
 }
 
+.overflow-container {
+    overflow-x: scroll;
+    overflow-y: scroll;
+    width: 400px;
+    height: 400px;
+    border: 1px solid grey;
+    position: relative;
+}
+
+.show-img {
+    width: 400px;
+    height: 400px;
+    transition: 0.5s;
+
+}
+
+.show-img:hover{
+    transform: scale(2.5);
+    transform-origin: 0 0;
+}
+
 .selected-img {
     width: 75px;
     height: 75px;
 }
+
 .selected-img:hover {
     cursor: pointer;
 }

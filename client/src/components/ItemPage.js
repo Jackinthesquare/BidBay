@@ -47,7 +47,7 @@ const ItemPage = () => {
                 }
             </div>
 
-            <div>
+            <div className="overflow-container">
                 <img className="show-img" src={selectImg || itemPage.images && itemPage.images[0].url} />
             </div>
 
