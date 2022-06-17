@@ -3,6 +3,10 @@ class Item < ApplicationRecord
     has_many :images
     has_many :bids
 
+
+    def item_price
+        self.bids.last.bid_price
+    end
     # ending time controls auction timer
     
     attribute :item_price, default: 0
