@@ -19,10 +19,14 @@ const ItemPage = () => {
             let req = await fetch(match.url)
             let res = await req.json()
             setItemPage(res)
-            setCounter(Math.floor(res.end_time_to_i - Math.floor(Date.now() / 1000)))
+
+            setCounter(Math.floor(res.end_time_to_i - Math.floor(Date.now() / 1000)) > 0 ? Math.floor(res.end_time_to_i - Math.floor(Date.now() / 1000)) : 0)
         })()
     }, [])
     // console.log(itemPage.images && itemPage.images[0].url)
+
+    useEffect(() => {
+    })
 
     // add counter in empty array to render counter on change
     useEffect(() => {
