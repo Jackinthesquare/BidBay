@@ -3,13 +3,15 @@ class Item < ApplicationRecord
     has_many :images
     has_many :bids
 
+    
+    # attribute :item_price, default: 0
 
     def item_price
-        self.bids.last.bid_price
+        self.bids.presence ? self.bids.last.bid_price : 0
     end
+
     # ending time controls auction timer
     
-    attribute :item_price, default: 0
     attribute :end_time, default: Time.now + 2.minute
     attribute :end_time_str, default: (Time.now + 2.minute).strftime("%m/%d/%Y at %I:%M %p")
 

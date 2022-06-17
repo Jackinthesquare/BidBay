@@ -72,6 +72,8 @@ im35= Image.create(url:'https://i.ebayimg.com/images/g/zIEAAOSwgbBij9qv/s-l1600.
 
 
 b1 = Bid.create(bid_price: 1, item_id: i1.id)
-b1 = Bid.create(bid_price: 2, item_id: i1.id)
-b1 = Bid.create(bid_price: 3, item_id: i1.id)
-b1 = Bid.create(bid_price: 4, item_id: i1.id)
+b2 = Bid.create(bid_price: 2, item_id: i1.id)
+b3 = Bid.create(bid_price: 3, item_id: i1.id)
+b4 = Bid.create(bid_price: 4, item_id: i1.id)
+
+b5 = Bid.create(bid_price: 5, item_id: i2.id)
