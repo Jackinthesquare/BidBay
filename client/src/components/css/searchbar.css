@@ -1,0 +1,16 @@
+.search-container {
+    margin: auto;
+    padding-top: 2%;
+}
+
+.search-btn {
+    border-radius:25px;
+    width: 7%;
+    background:rgb(112, 16, 201);
+    color: white;
+    font-size: 15px;
+    border: 1px solid #282A35;
+    cursor: pointer;
+    border-top-left-radius:0;
+    border-bottom-left-radius:0;
+}

@@ -24,6 +24,7 @@
 
 .pic-card > p > span {
     font-weight: bold;
+    color: rgb(152, 97, 202);
 }
 
 
@@ -38,6 +39,7 @@
 
 .item-title{
     font-size: 1em;
+    color: rgb(84, 45, 121);
 }
 
 .pic-card-img {

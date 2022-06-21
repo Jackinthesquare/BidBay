@@ -1,8 +1,17 @@
 import { useState } from "react"
+import "./css/searchbar.css"
+
 const SearchBar = ({ setSearch }) => {
 
+    const [newSearch, setNewSearch] = useState("")
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        setSearch(newSearch)
+    }
+
     return (
-        <div className="search-container" >
+        <div className="search-container" onSubmit={handleSubmit} >
             <form>
                 <input
                     className="search-bar"
@@ -10,9 +19,9 @@ const SearchBar = ({ setSearch }) => {
                     name="search"
                     placeholder="Search for anything"
                     autoComplete="off"
-                    onChange = {e => setSearch(e.target.value)}
+                    onChange = {e => setNewSearch(e.target.value)}
                 />
-                {/* <button type="submit" className="search-btn"> Search </button> */}
+                <button type="submit" className="search-btn"> Search </button>
             </form>
         </div>
     );
