@@ -2,6 +2,17 @@
     height: 500px;
 }
 
+.account-text {
+    /* border: 1px solid black; */
+    height: 400 px;
+    width: 50%;
+    margin: auto;
+    text-align: start;
+    position: relative;
+    top: 20%;
+    left: 17%;
+}
+
 .purchase-container {
     height: 500px; 
 }

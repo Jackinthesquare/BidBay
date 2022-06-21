@@ -16,12 +16,19 @@ import { useState, useEffect } from "react"
 const Home = () => {
     const [items, setItems] = useState([])
     const [itemId, setItemId] = useState(0)
+    const [user,setUser] = useState(0)
 
     useEffect(() => {
         (async () => {
             let req = await fetch('/items')
             let res = await req.json()
             setItems(res)
+        })()
+    }, [])
+
+    useEffect(() => {
+        (async () => {
+            setUser(1)
         })()
     }, [])
 
@@ -37,7 +44,7 @@ const Home = () => {
                 </Route>
 
                 <Route path="/my_account">
-                    <MyAccount />
+                    <MyAccount user={user}/>
                 </Route>
 
                 <Route path="/my_auctions">
