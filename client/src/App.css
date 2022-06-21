@@ -13,6 +13,7 @@
 
 .home-header {
   background: rgb(159, 96, 218);
+  background-image: linear-gradient(180deg, rgb(66, 26, 104), rgb(159, 96, 218));
   padding: 0;
   margin: 0;
   height: 175px;
