@@ -1,6 +1,6 @@
 import "./css/ItemContainer.css"
 import { useState } from "react"
-import { Route, useRouteMatch } from 'react-router-dom'
+import { useRouteMatch } from 'react-router-dom'
 
 import Item from "./Item"
 import SearchBar from "./SearchBar"

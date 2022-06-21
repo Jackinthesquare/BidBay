@@ -51,8 +51,8 @@ const Home = () => {
                 <Route exact path="/items/:id">
                     <ItemPage />
                 </Route>
+                <Redirect exact from="/" to="/items" />
             </Switch>
-            <Redirect from="/" to="/items" />
 
             <Footer />
         </div>

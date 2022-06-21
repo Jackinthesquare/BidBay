@@ -1,3 +1,5 @@
+import "./css/my_account.css"
+
 const MyAccount = () => {
 
     return (
