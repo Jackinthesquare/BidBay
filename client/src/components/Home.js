@@ -8,7 +8,7 @@ import MyAccount from "./MyAccount"
 import Auctions from "./Auctions"
 import Purchases from "./Purchases"
 
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import { useState, useEffect } from "react"
 
 
@@ -52,6 +52,7 @@ const Home = () => {
                     <ItemPage />
                 </Route>
             </Switch>
+            <Redirect from="/" to="/items" />
 
             <Footer />
         </div>

@@ -1,6 +1,7 @@
 .search-container {
     margin: auto;
     padding-top: 2%;
+    gap: 0;
 }
 
 .search-btn {
@@ -9,8 +10,13 @@
     background:rgb(112, 16, 201);
     color: white;
     font-size: 15px;
-    border: 1px solid #282A35;
+    /* border: 1px solid #282A35; */
     cursor: pointer;
     border-top-left-radius:0;
     border-bottom-left-radius:0;
+}
+
+.search-bar {
+    border: 2px solid black;
+    height: 17px;
 }
