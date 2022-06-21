@@ -1,4 +1,5 @@
 import "./css/ItemContainer.css"
+import { useState } from "react"
 import { Route, useRouteMatch } from 'react-router-dom'
 
 import Item from "./Item"
@@ -7,14 +8,16 @@ import SearchBar from "./SearchBar"
 
 const ItemContainer = ({ items, setItemId }) => {
     const match = useRouteMatch()
-        
+    const [search, setSearch] = useState("")
+
+    const displayedItems = items.filter(item => item.title.toLowerCase().includes(search.toLowerCase()))
 
     return (
         <div>
-            <SearchBar />
+            <SearchBar search={search} setSearch={setSearch} />
             <div className="pic-container">
                 {
-                    items.map((item) => {
+                    displayedItems.map((item) => {
                         return (
                             // <div className="pic-card">
                             // <h4 className="item-title">{item.title}</h4>
