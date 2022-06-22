@@ -61,5 +61,26 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .bid-form {
- 
+    gap: 10px;
+}
+
+.bid-input {
+    height: 55px;
+    width: 250px;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.handleBid-btn {
+    background-color: #0053a0;
+    border: 1px solid #0053a0;
+    color: white;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+}
+
+.handleBid-btn:hover {
+    background: rgb(89, 32, 221);
+    cursor: pointer;
 }

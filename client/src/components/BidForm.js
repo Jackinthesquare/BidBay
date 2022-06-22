@@ -32,7 +32,7 @@ const BidForm = ({ isVisible, setIsVisible, itemPage, counter }) => {
     return (
         <div className="bid-modal" style={{ display: isVisible ? "block" : "none" }}>
             <button className="modal-x-btn" onClick={() => setIsVisible(false)}>x</button>
-            <p className="bid-price">US ${itemPage.item_price}</p>
+            <p className="bid-price">US ${itemPage.item_price} <span className="bid-history-span">[{itemPage.bids && itemPage.bids.length} bids]</span></p>
             <p className="bid-end">Time Ends : {itemPage.end_time_str}</p>
             <p style={{fontWeight: 'bold'}}>Time left : {counter} seconds</p>
             <div className="bid-div">
@@ -48,7 +48,7 @@ const BidForm = ({ isVisible, setIsVisible, itemPage, counter }) => {
                         autoComplete="off"
                         onChange={e => setPriceChange(e.target.value)}
                     />
-                    <button onClick={handleBid}>bid</button>
+                    <button className="handleBid-btn" onClick={handleBid}>Bid</button>
                 </form>
                 <p className="bid-disclaimer">When you bid, it means you're committing to buy this item if you're the winning bidder.</p>
             </div>

@@ -58,7 +58,7 @@ const ItemPage = () => {
             <div className="desc-box">
                 <h1>{itemPage.title}</h1>
                 {itemPage && <p><span>Description</span> : {itemPage.description}</p>}
-                <p><span>Current Bid : $</span>{itemPage.item_price}</p>
+                <p><span>Current Bid : $</span>{itemPage.item_price} <span className="bid-history-span">[{itemPage.bids && itemPage.bids.length} bids]</span></p>
                 <p><span>Time Ends : </span>{itemPage.end_time_str}</p>
                 <p style={{fontWeight: 'bold'}}>Time left : {counter} seconds</p>
                 <button className="bid-btn" onClick={() => setIsVisible(true) }>Bid</button>

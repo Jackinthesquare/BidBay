@@ -94,3 +94,9 @@ font-weight: bold;
     background: rgb(89, 32, 221);
     cursor: pointer;
 }
+
+.bid-history-span {
+    position: relative;
+    right: -10%;
+    color: #0053a0
+}
