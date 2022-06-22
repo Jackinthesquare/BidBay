@@ -1,8 +1,27 @@
 import "./css/bidmodal.css"
-import ItemPage from "./ItemPage";
+import { useState } from 'react'
+
 const BidForm = ({ isVisible, setIsVisible, itemPage, counter }) => {
+    const [priceChange, setPriceChange] = useState(0)
+
     // const num = 12312.11111
     // console.log(num.toFixed(2))
+    const handleBid = (e) => {
+        e.preventDefault();
+        if (counter > 0 && priceChange > itemPage.item_price) {
+            fetch("/bids", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ priceChange })
+            })
+        }
+        else {
+            alert("Bid has not been accepted. Please try again")
+        }
+        
+    }
 
     return (
         <div className="bid-modal" style={{ display: isVisible ? "block" : "none" }}>
@@ -21,8 +40,9 @@ const BidForm = ({ isVisible, setIsVisible, itemPage, counter }) => {
                         name="bid"
                         placeholder="US$"
                         autoComplete="off"
+                        onChange={e => setPriceChange(e.target.value)}
                     />
-                    <button>bid</button>
+                    <button onClick={handleBid}>bid</button>
                 </form>
                 <p className="bid-disclaimer">When you bid, it means you're committing to buy this item if you're the winning bidder.</p>
             </div>

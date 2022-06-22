@@ -7,6 +7,14 @@ class UsersController < ApplicationController
         render json: find_user, serializer: IndividualUserSerializer, status: :ok
     end
 
+    # def show
+    # user = User.find_by(id: session[:user_id])
+    # if user
+    # render json: user, serializer: IndividualUserSerializer, status: :ok
+    # else
+    #     render json : { error: "Not authorized" }, status: :unauthorized
+    # end
+
     def create
         create = User.create(user_params)
         render json: create, status: :created

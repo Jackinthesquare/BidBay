@@ -18,7 +18,15 @@ import { useState, useEffect } from "react"
 const Home = () => {
     const [items, setItems] = useState([])
     const [itemId, setItemId] = useState(0)
-    const [user, setUser] = useState(0)
+    const [user, setUser] = useState(null);
+
+    // useEffect(() => {
+    //   fetch("/me").then((response) => {
+    //     if (response.ok) {
+    //       response.json().then((user) => setUser(user));
+    //     }
+    //   });
+    // }, [])
 
     useEffect(() => {
         (async () => {
@@ -30,19 +38,21 @@ const Home = () => {
 
     useEffect(() => {
         (async () => {
-            setUser(1)
+            setUser(6)
         })()
     }, [])
 
     return (
         <div className="home">
             <h1 className="home-header"><img className="home-logo" src={BBlogo} /></h1>
+            {/* <button className="logout-btn">Logout</button> */}
 
             <NavBar />
 
             <Switch>
+                <Redirect exact from="/" to="/items" />
                 <Route exact path="/login">
-                    <Login />
+                    <Login onLogin={setUser} />
                 </Route>
 
                 <Route exact path="/signup">
@@ -67,7 +77,6 @@ const Home = () => {
                 <Route exact path="/items/:id">
                     <ItemPage />
                 </Route>
-                <Redirect exact from="/" to="/login" />
             </Switch>
 
             <Footer />

@@ -7,7 +7,7 @@ import SearchBar from "./SearchBar"
 
 
 const ItemContainer = ({ items, setItemId }) => {
-    const match = useRouteMatch()
+    // const match = useRouteMatch()
     const [search, setSearch] = useState("")
 
     const displayedItems = items.filter(item => item.title.toLowerCase().includes(search.toLowerCase()))

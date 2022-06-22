@@ -4,6 +4,7 @@ import "./css/my_account.css"
 const MyAccount = ({ user }) => {
   const [userAccount, setUserAccount] = useState([])
 
+console.log(user)
 
   useEffect(() => {
     (async () => {
