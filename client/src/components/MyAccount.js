@@ -17,13 +17,10 @@ console.log(user)
   return (
     <div className="account-container">
       <div className="account-text">
-        <h1>Username : {userAccount.username}</h1>
-        <h1>Balance : $ {userAccount.balance}</h1>
-        <h1>Address :
-          11 Broadway<br />
-          New York, New York, 10004
-        </h1>
-        <h1>Credit card: 1234 4567 8912 3456</h1>
+        <h1>My account</h1>
+        <li>Username : {userAccount.username}</li>
+        <li>Balance : $ {userAccount.balance}</li>
+        <button>Change password</button>
       </div>
     </div>
   );

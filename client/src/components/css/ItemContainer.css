@@ -27,6 +27,11 @@
     color: rgb(152, 97, 202);
 }
 
+.pic-card > p {
+    font-size: 0.9em;
+    
+}
+
 
 .pic-card-img:hover {
     transform: scale(1.1) rotate(5deg);
@@ -38,7 +43,7 @@
 
 
 .item-title{
-    font-size: 1em;
+    font-size: 1.1em;
     color: rgb(84, 45, 121);
 }
 
