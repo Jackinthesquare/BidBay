@@ -3,18 +3,24 @@ import { useState } from 'react'
 
 const BidForm = ({ isVisible, setIsVisible, itemPage, counter }) => {
     const [priceChange, setPriceChange] = useState(0)
-
+    console.log("e.target.value is a " + typeof(parseFloat(priceChange)))
+    
     // const num = 12312.11111
     // console.log(num.toFixed(2))
-    const handleBid = (e) => {
+
+    const handleBid = async (e) => {
         e.preventDefault();
         if (counter > 0 && priceChange > itemPage.item_price) {
-            fetch("/bids", {
+            let req = await fetch("/bids", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ priceChange })
+                body: JSON.stringify({ 
+                    "bid_price" : parseFloat(priceChange),
+                    "item_id" : parseInt(itemPage.id),
+                    "user_id" : parseInt(6)
+                 })
             })
         }
         else {
@@ -33,11 +39,11 @@ const BidForm = ({ isVisible, setIsVisible, itemPage, counter }) => {
                 <p>Place your bid</p>
                 <form className="bid-form">
                     <input
-                        className="search-bar"
+                        className="bid-input"
                         type="number"
                         // prevents "e" in numbers
                         onKeyDown={(evt) => ["e", "E", "+", "-"].includes(evt.key) && evt.preventDefault()}
-                        name="bid"
+                        name="bid[bid_price]"
                         placeholder="US$"
                         autoComplete="off"
                         onChange={e => setPriceChange(e.target.value)}

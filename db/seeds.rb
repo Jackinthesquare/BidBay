@@ -10,7 +10,7 @@ u2 = User.create(username: 'CharizardFan420', password: '123', balance: 5000.00)
 u3 = User.create(username: 'Shill Bidder', password: '123', balance: 20000.00)
 u4 = User.create(username: 'Window Shopper', password: '123', balance: 0.00)
 u5 = User.create(username: 'Dubloon Smuggler', password: '123', balance: 0.00)
-u5 = User.create(username: 'Shill Bidders brother', password: '123', balance: 20000.00)
+u6 = User.create(username: 'Shill Bidders brother', password: '123', balance: 20000.00)
  
 
 i1 = Item.create(title: 'Charizard card', description: '20 years old',item_tag:'Pokemon', user_id: u2.id)
@@ -71,9 +71,9 @@ im34= Image.create(url:'https://i.ebayimg.com/images/g/Yh0AAOSwFhZij9qu/s-l1600.
 im35= Image.create(url:'https://i.ebayimg.com/images/g/zIEAAOSwgbBij9qv/s-l1600.jpg', item_id: i10.id)
 
 
-b1 = Bid.create(bid_price: 1, item_id: i1.id)
-b2 = Bid.create(bid_price: 2, item_id: i1.id)
-b3 = Bid.create(bid_price: 3, item_id: i1.id)
-b4 = Bid.create(bid_price: 4, item_id: i1.id)
+b1 = Bid.create(bid_price: 1, item_id: i1.id, user_id: u3.id)
+b2 = Bid.create(bid_price: 2, item_id: i1.id, user_id: u3.id)
+b3 = Bid.create(bid_price: 3, item_id: i1.id, user_id: u6.id)
+b4 = Bid.create(bid_price: 4, item_id: i1.id, user_id: u3.id)
 
-b5 = Bid.create(bid_price: 5, item_id: i2.id)
+b5 = Bid.create(bid_price: 5, item_id: i2.id, user_id: u3.id)
