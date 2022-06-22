@@ -1,9 +1,8 @@
 import "./css/bidmodal.css"
-import { useState,useEffect } from 'react'
+import { useState } from 'react'
 
 const BidForm = ({ isVisible, setIsVisible, itemPage, counter }) => {
     const [priceChange, setPriceChange] = useState(0)
-    const [itemPrice, setItemPrice] = useState(itemPage.item_price)
 
     const handleBid = async (e) => {
         e.preventDefault();
@@ -22,7 +21,8 @@ const BidForm = ({ isVisible, setIsVisible, itemPage, counter }) => {
             })
             let res = await req.json()
 
-            setItemPrice(res.item_price)
+        
+            window.location.reload()
         }
         else {
             alert("Bid has not been accepted. Please try again")

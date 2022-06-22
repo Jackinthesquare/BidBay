@@ -6,7 +6,7 @@ const Item = ({ item, setItemId }) => {
   const handleRedirect = () => {
     setItemId(item.id)
     console.log(item.id)
-    history.push(`/signup`) // tested routing works
+    // history.push(`/signup`) // tested routing works
     history.push(`/items/${item.id}`)
   }
 
