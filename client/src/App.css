@@ -1,11 +1,11 @@
 .App {
   text-align: center;
   background-color: whitesmoke;
+  font-family: 'Libre Baskerville', serif;
+ 
 }
 
-.login-container {
-  
-}
+.login-container {}
 
 .login-form {
   height: 550px;
@@ -26,11 +26,10 @@
   padding: 2px;
 }
 
-.home-logo{
+.home-logo {
   /* position: absolute;
   top: 0;
   left: 0; */
   border-radius: 50%;
   height: 175px;
 }
-
