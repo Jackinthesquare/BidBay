@@ -22,7 +22,7 @@ const BidForm = ({ isVisible, setIsVisible, itemPage, counter }) => {
             })
             let res = await req.json()
 
-            setItemPrice(res)
+            setItemPrice(res.item_price)
         }
         else {
             alert("Bid has not been accepted. Please try again")
@@ -33,7 +33,7 @@ const BidForm = ({ isVisible, setIsVisible, itemPage, counter }) => {
     return (
         <div className="bid-modal" style={{ display: isVisible ? "block" : "none" }}>
             <button className="modal-x-btn" onClick={() => setIsVisible(false)}>x</button>
-            <p className="bid-price">US ${itemPrice} <span className="bid-history-span">[{itemPage.bids && itemPage.bids.length} bids]</span></p>
+            <p className="bid-price">US ${itemPage.item_price} <span className="bid-history-span">[{itemPage.bids && itemPage.bids.length} bids]</span></p>
             <p className="bid-end">Time Ends : {itemPage.end_time_str}</p>
             <p style={{ fontWeight: 'bold' }}>Time left : {counter} seconds</p>
             <div className="bid-div">
