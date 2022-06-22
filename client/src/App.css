@@ -3,9 +3,15 @@
   background-color: whitesmoke;
 }
 
+.login-container {
+  
+}
+
 .login-form {
+  height: 550px;
   display: flex;
   justify-content: center;
+  align-items: center;
   /* align-items: center; */
   border: 1px solid blueviolet;
 }

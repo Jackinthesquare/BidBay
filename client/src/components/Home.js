@@ -7,6 +7,8 @@ import ItemPage from "./ItemPage"
 import MyAccount from "./MyAccount"
 import Auctions from "./Auctions"
 import Purchases from "./Purchases"
+import Login from "./Login"
+import Signup from "./Signup"
 
 import { Route, Switch, Redirect } from 'react-router-dom'
 import { useState, useEffect } from "react"
@@ -16,7 +18,7 @@ import { useState, useEffect } from "react"
 const Home = () => {
     const [items, setItems] = useState([])
     const [itemId, setItemId] = useState(0)
-    const [user,setUser] = useState(0)
+    const [user, setUser] = useState(0)
 
     useEffect(() => {
         (async () => {
@@ -39,12 +41,19 @@ const Home = () => {
             <NavBar />
 
             <Switch>
+                <Route exact path="/login">
+                    <Login />
+                </Route>
+
+                <Route exact path="/signup">
+                    <Signup />
+                </Route>
                 <Route exact path="/items">
                     <ItemContainer items={items} setItemId={setItemId} />
                 </Route>
 
                 <Route path="/my_account">
-                    <MyAccount user={user}/>
+                    <MyAccount user={user} />
                 </Route>
 
                 <Route path="/my_auctions">
@@ -58,7 +67,7 @@ const Home = () => {
                 <Route exact path="/items/:id">
                     <ItemPage />
                 </Route>
-                <Redirect exact from="/" to="/items" />
+                <Redirect exact from="/" to="/login" />
             </Switch>
 
             <Footer />
