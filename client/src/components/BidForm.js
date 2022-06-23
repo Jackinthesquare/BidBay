@@ -6,8 +6,8 @@ const BidForm = ({ isVisible, setIsVisible, itemPage, counter }) => {
 
     const handleBid = async (e) => {
         e.preventDefault();
-        // if (counter > 0 && priceChange > itemPage.item_price) {
-        if (priceChange > itemPage.item_price) {
+        if (counter > 0 && priceChange > itemPage.item_price) {
+        // if (priceChange > itemPage.item_price) {
             let req = await fetch("/bids", {
                 method: "POST",
                 headers: {
