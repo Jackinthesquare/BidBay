@@ -1,5 +1,5 @@
 class IndividualUserSerializer < ActiveModel::Serializer
-  attributes :id, :username, :balance, :items
+  attributes :id, :username, :balance, :pfp, :items
 
   # has_many :items
   def items

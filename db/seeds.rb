@@ -5,12 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-u1 = User.create(username: 'BigBalla69', password: '123', balance: 10000.00)
-u2 = User.create(username: 'CharizardFan420', password: '123', balance: 5000.00)
-u3 = User.create(username: 'Shill Bidder', password: '123', balance: 20000.00)
-u4 = User.create(username: 'Window Shopper', password: '123', balance: 0.00)
-u5 = User.create(username: 'Dubloon Smuggler', password: '123', balance: 0.00)
-u6 = User.create(username: 'Shill Bidders brother', password: '123', balance: 20000.00)
+u1 = User.create(username: 'BigBalla69', password: '123', balance: 10000.00, pfp: 'https://icon-library.com/images/supreme-icon/supreme-icon-25.jpg')
+u2 = User.create(username: 'CharizardFan420', password: '123', balance: 5000.00, pfp: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cb33e091-6aac-43af-b782-109fec329825/d7it3ag-9ef50ec0-78f6-4c32-a659-0aac2240ee5e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2NiMzNlMDkxLTZhYWMtNDNhZi1iNzgyLTEwOWZlYzMyOTgyNVwvZDdpdDNhZy05ZWY1MGVjMC03OGY2LTRjMzItYTY1OS0wYWFjMjI0MGVlNWUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.jiOmAYR2124_HVt_aiwQ3D5gSnhW_lqGDqrJ8-Mygmw')
+u3 = User.create(username: 'Shill Bidder', password: '123', balance: 20000.00, pfp: 'https://sidomexentertainment.com/wp-content/uploads/2021/02/Funny-head.jpg')
+u4 = User.create(username: 'Window Shopper', password: '123', balance: 0.00, pfp: 'https://mpng.subpng.com/20180420/jle/kisspng-computer-icons-eye-children-eye-5ad96c51214514.1274571215241984811363.jpg')
+u5 = User.create(username: 'Dubloon Smuggler', password: '123', balance: 0.00, pfp: 'https://image.shutterstock.com/image-vector/pirate-gold-coin-icon-skull-260nw-706012945.jpg')
+u6 = User.create(username: 'Shill Bidders brother', password: '123', balance: 20000.00, pfp: 'https://i.pinimg.com/736x/e6/e8/3a/e6e83a1867e042ac41941b03e3d817ca.jpg')
  
 
 i1 = Item.create(title: 'Charizard card', description: '20 years old',item_tag:'Pokemon', user_id: u2.id)

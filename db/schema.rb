@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2022_06_07_151753) do
     t.string "username"
     t.string "password"
     t.float "balance"
+    t.string "pfp"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
