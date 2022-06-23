@@ -18,7 +18,8 @@ import { useState, useEffect } from "react"
 const Home = () => {
     const [items, setItems] = useState([])
     const [itemId, setItemId] = useState(0)
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState(6);
+    const [userData, setUserData] = useState([])
 
     // useEffect(() => {
     //   fetch("/me").then((response) => {
@@ -38,13 +39,16 @@ const Home = () => {
 
     useEffect(() => {
         (async () => {
-            setUser(6)
+            let req = await fetch(`/users/${user}`)
+            let res = await req.json()
+            setUserData(res)
+            console.log(res)
         })()
     }, [])
 
     return (
         <div className="home">
-            <h1 className="home-header"><img className="home-logo" src={BBlogo} /></h1>
+            <h1 className="home-header"><img className="home-logo" src={BBlogo} /><span className="hi-header">Hi <span className="user-header">{userData.username}</span> !</span></h1>
             {/* <button className="logout-btn">Logout</button> */}
 
             <NavBar />
