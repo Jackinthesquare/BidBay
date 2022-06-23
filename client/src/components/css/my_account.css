@@ -1,23 +1,70 @@
 .account-container {
     height: 520px;
-    /* border: 1px solid black; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.acct-btn {
+    color: whitesmoke;
+    background-color: #0053a0;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+    border: none;
+}
+
+.acct-btn:hover {
+    background: rgb(89, 32, 221);
+    cursor: pointer;
+}
+
+.change-pwd-container {
+    margin: 160px 0 0 0;
+    width: 200px;
 }
 
 .account-text {
-    height: 400 px;
-    width: 50%;
-    margin: auto;
+    /* border: 1px solid red; */
     text-align: start;
-    position: relative;
-    top: 20%;
-    left: 14%;
-    align-items: center;
+    /* border: 1px solid black; */
+    width: 30%;
+    height: 400px;
+}
+.account-text > h1 {
+    margin: 30px 0 0 0;
 }
 
+.account-text > li {
+    margin: 30px;
+    list-style: none;
+}
+
+.pfp-container {
+    width: 30%;
+    height: 400px;
+    /* border: 1px solid black; */
+}
+
+.account-pfp {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    margin: 40px;
+}
+
+
+
+
+
+
+
+
 .purchase-container {
-    height: 500px; 
+    height: 500px;
 }
 
 .auction-container {
-    height: 500px; 
+    height: 500px;
 }

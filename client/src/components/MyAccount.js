@@ -4,7 +4,7 @@ import "./css/my_account.css"
 const MyAccount = ({ user }) => {
   const [userAccount, setUserAccount] = useState([])
 
-console.log(user)
+  console.log(user)
 
   useEffect(() => {
     (async () => {
@@ -16,11 +16,20 @@ console.log(user)
 
   return (
     <div className="account-container">
+      <div className="pfp-container">
+        <div>
+          <img className="account-pfp" src={userAccount.pfp} />
+        </div>
+        <button className="acct-btn">Change profile picture</button>
+      </div>
+
       <div className="account-text">
         <h1>My account</h1>
         <li>Username : {userAccount.username}</li>
         <li>Balance : $ {userAccount.balance}</li>
-        <button>Change password</button>
+        <div className="change-pwd-container">
+        <button className="acct-btn">Change password</button>
+        </div>
       </div>
     </div>
   );
